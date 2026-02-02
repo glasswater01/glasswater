@@ -1,35 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Galería</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* por si no tienes style.css aún */
+    body{
+      margin:0;
+      background:#111;
+    }
+
+    .galeria{
+      display:grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap:0;
+    }
+
+    .galeria img{
+      width:100%;
+      height:180px;
+      object-fit:cover;
+      display:block;
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- 👇 AQUÍ va el contenedor -->
-  <div class="galeria" id="galeria"></div>
+  <div class="galeria">
+    <img src="./media/IMG_0327_3.jpg" loading="lazy">
+    <img src="./media/IMG_0594_3.jpg" loading="lazy">
+    <img src="./media/IMG_0769_3.jpg" loading="lazy">
+    <img src="./media/IMG_0790_3.jpg" loading="lazy">
+    <img src="./media/IMG_0791_3.jpg" loading="lazy">
+    <img src="./media/IMG_0817_3.jpg" loading="lazy">
+    <img src="./media/IMG_0818_3.jpg" loading="lazy">
+    <img src="./media/IMG_0820_3.jpg" loading="lazy">
+    <img src="./media/IMG_0863_3.jpg" loading="lazy">
+    <img src="./media/IMG_1130_3.jpg" loading="lazy">
+    <img src="./media/IMG_1826_3.jpg" loading="lazy">
+    <img src="./media/IMG_2237_3.jpg" loading="lazy">
+    <img src="./media/IMG_2252_3.jpg" loading="lazy">
+    <img src="./media/IMG_2254_3.jpg" loading="lazy">
+    <img src="./media/IMG_2374_3.jpg" loading="lazy">
+    <img src="./media/IMG_2412_3.jpg" loading="lazy">
+    <img src="./media/IMG_2544_3.jpg" loading="lazy">
 
+  </div>
 
-  <!-- 👇 Y JUSTO antes de cerrar body va el script -->
-  <script>
-  const imagenes = [
-    "foto1.jpg",
-    "foto2.jpg",
-    "foto3.jpg",
-    "foto4.jpg"
-  ];
+</body>
+</html>
 
-  const galeria = document.getElementById("galeria");
-
-  imagenes.forEach(nombre => {
-    const img = document.createElement("img");
-    img.src = "media/" + nombre;
-    img.loading = "lazy";
-    galeria.appendChild(img);
-  });
-  </script>
 
 </body>
 </html>
