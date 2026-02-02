@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Galería</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- 👇 AQUÍ va el contenedor -->
+  <div class="galeria" id="galeria"></div>
+
+
+  <!-- 👇 Y JUSTO antes de cerrar body va el script -->
+  <script>
+  const imagenes = [
+    "foto1.jpg",
+    "foto2.jpg",
+    "foto3.jpg",
+    "foto4.jpg"
+  ];
+
+  const galeria = document.getElementById("galeria");
+
+  imagenes.forEach(nombre => {
+    const img = document.createElement("img");
+    img.src = "media/" + nombre;
+    img.loading = "lazy";
+    galeria.appendChild(img);
+  });
+  </script>
+
+</body>
+</html>
