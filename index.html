@@ -29,8 +29,19 @@
 </head>
 
 <body>
+<button id="menuBtn" class="menu-btn">☰</button>
+<div id="sidebar" class="sidebar">
+  <button id="closeBtn" class="close-btn">✕</button>
 
-  <div class="galeria">
+  <h2>Índice</h2>
+
+  <a href="#top">Inicio</a>
+  <a href="#galeria">Galería</a>
+  <a href="#about">About</a>
+</div>
+
+
+  <div class="galeria" id="galeria">
     <img src="./media/IMG_0327_3.jpg" loading="lazy">
     <img src="./media/IMG_0594_3.jpg" loading="lazy">
     <img src="./media/IMG_0769_3.jpg" loading="lazy">
@@ -105,6 +116,20 @@
 
 
   </div>
+  <script>
+const sidebar = document.getElementById("sidebar");
+const menuBtn = document.getElementById("menuBtn");
+const closeBtn = document.getElementById("closeBtn");
+
+menuBtn.onclick = () => sidebar.classList.add("open");
+closeBtn.onclick = () => sidebar.classList.remove("open");
+
+document.addEventListener("click", (e) => {
+  if (!sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+    sidebar.classList.remove("open");
+  }
+});
+</script>
 
 </body>
 </html>
