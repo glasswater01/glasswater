@@ -25,4 +25,55 @@ body{
 .galeria img:hover{
   transform: scale(1.03);
 }
+/* botón hamburguesa */
+.menu-btn{
+  position:fixed;
+  top:15px;
+  left:15px;
+  z-index:1001;
+  font-size:28px;
+  background:#111;
+  color:white;
+  border:none;
+  padding:8px 12px;
+  cursor:pointer;
+  border-radius:6px;
+}
+
+/* sidebar */
+.sidebar{
+  position:fixed;
+  top:0;
+  left:-260px;
+  width:250px;
+  height:100%;
+  background:#111;
+  color:white;
+  padding:20px;
+  transition:.3s;
+  z-index:1000;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+.sidebar.open{
+  left:0;
+}
+
+.sidebar a{
+  color:white;
+  text-decoration:none;
+  font-size:18px;
+}
+
+.close-btn{
+  align-self:flex-end;
+  background:none;
+  border:none;
+  color:white;
+  font-size:20px;
+  cursor:pointer;
+}
+
 
