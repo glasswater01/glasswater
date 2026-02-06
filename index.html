@@ -33,7 +33,6 @@
   <img src="./media/menu.png" alt="Menú">
 </button>
 <div id="sidebar" class="sidebar">
-  <button id="closeBtn" class="close-btn">✕</button>
 
   <a href="#galeria">galeria</a>
   <a href="#guardados">guardados</a>
@@ -120,15 +119,9 @@
   <script>
 const sidebar = document.getElementById("sidebar");
 const menuBtn = document.getElementById("menuBtn");
-const closeBtn = document.getElementById("closeBtn");
 
-menuBtn.onclick = () => sidebar.classList.add("open");
-closeBtn.onclick = () => sidebar.classList.remove("open");
-
-document.addEventListener("click", (e) => {
-  if (!sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
-    sidebar.classList.remove("open");
-  }
+menuBtn.addEventListener("click", () => {
+  sidebar.classList.toggle("open");
 });
 </script>
 
