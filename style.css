@@ -104,4 +104,33 @@ body{
   color: #1a73e8;
   text-decoration: underline;
 }
+/* =========================
+   MÓVIL: 4 fotos por fila
+   y sidebar que tape ~2 fotos
+   ========================= */
+@media (max-width: 600px){
+
+  /* 4 columnas en móvil */
+  .galeria{
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* ajusta el tamaño de cada “tile” para que siga cuadrado */
+  .galeria img{
+    height: 22vw; /* prueba 20–26vw según te guste */
+  }
+
+  /* sidebar más ancho: aprox 2 columnas */
+  .sidebar{
+    width: 50vw;         /* media pantalla ≈ 2/4 columnas */
+    padding-top: 80px;   /* mantiene los links abajo del icono */
+  }
+
+  /* botón menú un poco más pequeño en móvil (opcional) */
+  .menu-btn{
+    width: 40px;
+    height: 40px;
+  }
+}
+
 
