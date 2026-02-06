@@ -53,21 +53,25 @@ body{
 }
 
 
-/* sidebar */
+/* ========================= */
+/* SIDEBAR CON IMAGEN FONDO  */
+/* ========================= */
+
 .sidebar{
   position: fixed;
   top: 0;
   left: 0;
-  width: 145px;          /* ancho del sidebar */
+
+  width: 140px;
   height: 100%;
 
-  background-image: url("./media/sidebar.jpg"); /* 👈 TU IMAGEN */
-  background-size: cover;        /* cubre todo el sidebar */
-  background-position: center;   /* centrada */
+  background-image: url("./media/sidebar.jpg");
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 
   padding: 20px;
-  padding-top: 80px;    /* baja los links para que no choquen con el icono */
+  padding-top: 80px;
 
   transform: translateX(-100%);
   transition: transform .3s ease;
@@ -78,27 +82,26 @@ body{
   flex-direction: column;
   gap: 15px;
 }
-.sidebar{
-  position: relative;
-}
 
+/* overlay oscuro para leer mejor el texto */
 .sidebar::before{
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.5); /* ajusta 0.3–0.6 */
+  background: rgba(0,0,0,0.5);
   z-index: -1;
 }
 
-
+/* estado abierto */
 .sidebar.open{
-  transform: translateX(0);       /* 🔥 entra */
+  transform: translateX(0);
 }
 
+/* links del índice */
 .sidebar a{
-  color:#1a73e8;              /* azul tipo link */
-  text-decoration: underline;
-  font-size:13px;             /* pequeño como querías */
   font-family: Arial, sans-serif;
-  margin:6px 0;
+  font-size: 13px;
+  color: #1a73e8;
+  text-decoration: underline;
 }
+
