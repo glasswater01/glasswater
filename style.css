@@ -63,7 +63,8 @@ body{
 
   background:#111;
   color:white;
-  padding:80px;
+  padding:20px;
+  padding-top:80px;
 
   transform: translateX(-100%);   /* 🔥 completamente fuera */
   transition: transform .3s ease; /* animación suave */
