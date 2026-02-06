@@ -58,13 +58,13 @@ body{
   position:fixed;
   top:0;
   left:0;
-  width:250px;
+  width:140px;
   height:100%;
 
   background:#111;
   color:white;
   padding:20px;
-  padding-top:80px;
+  padding-top:100px;
 
   transform: translateX(-100%);   /* 🔥 completamente fuera */
   transition: transform .3s ease; /* animación suave */
