@@ -33,7 +33,6 @@
   <img src="./media/menu.png" alt="Menú">
 </button>
 <div id="sidebar" class="sidebar">
-
   <a href="#galeria">galeria</a>
   <a href="#guardados">guardados</a>
   <a href="#calendario">calendario</a>
@@ -117,13 +116,14 @@
 
   </div>
   <script>
-const sidebar = document.getElementById("sidebar");
-const menuBtn = document.getElementById("menuBtn");
+  const sidebar = document.getElementById("sidebar");
+  const menuBtn = document.getElementById("menuBtn");
 
-menuBtn.addEventListener("click", () => {
-  sidebar.classList.toggle("open");
+  menuBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("open");
 });
 </script>
+
 
 </body>
 </html>
