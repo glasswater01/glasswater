@@ -80,18 +80,9 @@ body{
 }
 
 .sidebar a{
-  color:white;
-  text-decoration:none;
-  font-size:18px;
+  color:#1a73e8;              /* azul tipo link */
+  text-decoration: underline;
+  font-size:13px;             /* pequeño como querías */
+  font-family: Arial, sans-serif;
+  margin:6px 0;
 }
-
-.close-btn{
-  align-self:flex-end;
-  background:none;
-  border:none;
-  color:white;
-  font-size:20px;
-  cursor:pointer;
-}
-
-
