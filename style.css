@@ -78,6 +78,17 @@ body{
   flex-direction: column;
   gap: 15px;
 }
+.sidebar{
+  position: relative;
+}
+
+.sidebar::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5); /* ajusta 0.3–0.6 */
+  z-index: -1;
+}
 
 
 .sidebar.open{
