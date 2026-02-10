@@ -7,13 +7,6 @@
   z-index: -2;
 }
 
-/* Oscurecer un poco para que se lea todo */
-.bg::after{
-  content:"";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,.35);
-}
 
 /* “escenario” donde colocamos stickers/cards */
 .stage{
