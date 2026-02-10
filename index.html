@@ -8,41 +8,50 @@
 </head>
 
 <body>
-  <main class="wrap">
-    <header class="hero">
-      <h1>bienvenida</h1>
-      <p class="intro">
-        un rincón personal. entra, mira alrededor, y si quieres…
-        <a class="inline-link" href="gallery.html">pasa a la galería</a>.
+  <!-- Fondo -->
+  <div class="bg"></div>
+
+  <main class="stage" id="top">
+
+    <!-- Sticker título -->
+    <div class="sticker title">
+      <h1>tu nombre</h1>
+      <p>bienvenida a mi rincón</p>
+    </div>
+
+    <!-- Música (opción A: archivo mp3 propio) -->
+    <div class="sticker music">
+      <div class="label">now playing</div>
+      <audio controls preload="none">
+        <source src="./media/song.mp3" type="audio/mpeg">
+      </audio>
+      <div class="small">canción — artista</div>
+    </div>
+
+    <!-- Presentación -->
+    <div class="card about">
+      <h2>hola!</h2>
+      <p>
+        soy ________. aquí guardo fotos, notas y cosas que me inspiran.
       </p>
-    </header>
+      <p class="small">
+        ✶ she/her · artista · etc
+      </p>
+    </div>
 
-    <!-- “floorplan” / mapa simple -->
-    <section class="grid">
-      <a class="tile" href="gallery.html">
-        <span class="tile-title">galería</span>
-        <span class="tile-sub">todas las fotos</span>
-      </a>
+    <!-- Links sueltos tipo botones -->
+    <a class="chip c1" href="gallery.html">galería</a>
+    <a class="chip c2" href="gallery.html#guardados">guardados</a>
+    <a class="chip c3" href="gallery.html#calendario">calendario</a>
 
-      <a class="tile" href="gallery.html#guardados">
-        <span class="tile-title">guardados</span>
-        <span class="tile-sub">selección</span>
-      </a>
+    <a class="chip c4" href="https://instagram.com/" target="_blank" rel="noreferrer">instagram</a>
+    <a class="chip c5" href="https://spotify.com/" target="_blank" rel="noreferrer">spotify</a>
 
-      <a class="tile" href="gallery.html#calendario">
-        <span class="tile-title">calendario</span>
-        <span class="tile-sub">fechas / notas</span>
-      </a>
+    <!-- Stickers imagen -->
+    <img class="img-sticker s1" src="./media/sticker1.png" alt="">
+    <img class="img-sticker s2" src="./media/sticker2.png" alt="">
 
-      <a class="tile" href="gallery.html#links">
-        <span class="tile-title">links</span>
-        <span class="tile-sub">sitios</span>
-      </a>
-    </section>
-
-    <!-- “stickers” opcionales (pon tus png si quieres) -->
-    <img class="sticker s1" src="./media/menu.png" alt="" />
-    <img class="sticker s2" src="./media/1.jpg" alt="" />
   </main>
 </body>
 </html>
+
