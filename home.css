@@ -1,87 +1,163 @@
-body{
-  margin: 0;
+/* Fondo con imagen (cámbiala por la tuya) */
+.bg{
+  position: fixed;
+  inset: 0;
+  background: url("./media/bg.jpg") center / cover no-repeat;
+  filter: saturate(1) contrast(1);
+  z-index: -2;
+}
+
+/* Oscurecer un poco para que se lea todo */
+.bg::after{
+  content:"";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.35);
+}
+
+/* “escenario” donde colocamos stickers/cards */
+.stage{
+  position: relative;
+  min-height: 100vh;
+  padding: 22px;
   font-family: Arial, sans-serif;
-  background: #0b0b0b;
-  color: #eee;
+  color: #fff;
 }
 
-.wrap{
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 60px 20px;
-}
-
-.hero h1{
-  margin: 0 0 12px;
-  font-size: 42px;
-}
-
-.intro{
-  font-size: 14px;
-  line-height: 1.6;
-  margin-bottom: 40px;
-}
-
-.inline-link{
-  color: #1a73e8;
-  text-decoration: underline;
-}
-
-.grid{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-}
-
-.tile{
-  display: block;
-  padding: 20px;
-  border: 1px solid rgba(255,255,255,.2);
+/* Tarjetas tipo papel */
+.card{
+  position: absolute;
+  width: min(360px, 86vw);
+  background: rgba(20,20,20,.55);
+  border: 1px solid rgba(255,255,255,.22);
   border-radius: 14px;
-  background: rgba(255,255,255,.04);
-  color: inherit;
-  text-decoration: none;
+  padding: 14px 14px 12px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,.35);
 }
 
-.tile:hover{
-  background: rgba(255,255,255,.07);
-}
-
-.tile-title{
+.card h2{
+  margin: 0 0 8px;
   font-size: 16px;
 }
 
-.tile-sub{
+.card p{
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.small{
   font-size: 12px;
-  opacity: .7;
+  opacity: .85;
 }
 
-@media (max-width: 600px){
-  .grid{
-    grid-template-columns: 1fr;
-  }
-
-  .hero h1{
-    font-size: 32px;
-  }
-}
+/* Stickers con texto */
 .sticker{
   position: absolute;
-  width: 70px;
-  height: 70px;
-  object-fit: cover;
-  opacity: .9;
+  background: rgba(255,255,255,.92);
+  color: #111;
+  border-radius: 14px;
+  padding: 10px 12px;
+  border: 1px solid rgba(0,0,0,.15);
+  box-shadow: 0 18px 40px rgba(0,0,0,.25);
 }
 
-.s1{
+.sticker.title{
+  top: 18px;
+  left: 18px;
+  transform: rotate(-2deg);
+}
+
+.sticker.title h1{
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: .2px;
+}
+
+.sticker.title p{
+  margin: 4px 0 0;
+  font-size: 12px;
+  opacity: .8;
+}
+
+.sticker.music{
   top: 20px;
-  right: 20px;
-  transform: rotate(6deg);
+  right: 18px;
+  width: min(320px, 86vw);
+  transform: rotate(2deg);
 }
 
-.s2{
-  top: 180px;
-  left: 20px;
-  transform: rotate(-6deg);
+.sticker.music .label{
+  font-size: 12px;
+  opacity: .75;
+  margin-bottom: 6px;
 }
 
+.sticker.music audio{
+  width: 100%;
+}
+
+/* Card presentación */
+.about{
+  top: 170px;
+  left: 26px;
+}
+
+/* Chips (links como pegatinas/botones) */
+.chip{
+  position: absolute;
+  display: inline-block;
+  padding: 9px 12px;
+  border-radius: 999px;
+  background: rgba(0,0,0,.6);
+  border: 1px solid rgba(255,255,255,.25);
+  color: #1a73e8;
+  text-decoration: underline;
+  font-size: 13px;
+  backdrop-filter: blur(6px);
+}
+
+.c1{ top: 360px; left: 30px; }
+.c2{ top: 410px; left: 30px; }
+.c3{ top: 460px; left: 30px; }
+
+.c4{ top: 360px; left: 160px; }
+.c5{ top: 410px; left: 160px; }
+
+/* Stickers imagen */
+.img-sticker{
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(0,0,0,.35);
+  border: 1px solid rgba(255,255,255,.18);
+}
+
+.s1{ bottom: 22px; left: 22px; transform: rotate(-6deg); }
+.s2{ bottom: 26px; right: 24px; transform: rotate(7deg); }
+
+/* Móvil: recolocar para que quede bonito */
+@media (max-width: 700px){
+  .sticker.music{
+    top: 92px;
+    right: 18px;
+    left: 18px;
+    width: auto;
+  }
+
+  .about{
+    top: 240px;
+    left: 18px;
+    right: 18px;
+    width: auto;
+  }
+
+  .c1{ top: 420px; left: 18px; }
+  .c2{ top: 470px; left: 18px; }
+  .c3{ top: 520px; left: 18px; }
+  .c4{ top: 420px; left: 150px; }
+  .c5{ top: 470px; left: 150px; }
+}
