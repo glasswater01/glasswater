@@ -18,7 +18,7 @@
 /* “escenario” donde colocamos stickers/cards */
 .stage{
   position: relative;
-  min-height: 100vh;
+  min-height: 200vh;
   padding: 22px;
   font-family: Arial, sans-serif;
   color: #fff;
