@@ -1,14 +1,15 @@
 /* Fondo con imagen (cámbiala por la tuya) */
 .bg{
-  position: absolute;
+  position: absolute;      /* 👈 clave */
   top: 0;
   left: 0;
+
   width: 100%;
-  height: 100vh;
+  height: 100vh;           /* ocupa UNA pantalla */
 
   background-image: url("./media/bg.jpg");
-  background-size: contain;      /* 🔥 NO RECORTA */
-  background-position: center top;
+  background-size: cover; /* 👈 llena la pantalla */
+  background-position: center;
   background-repeat: no-repeat;
 
   z-index: -2;
