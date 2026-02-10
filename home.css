@@ -65,3 +65,23 @@ body{
     font-size: 32px;
   }
 }
+.sticker{
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  opacity: .9;
+}
+
+.s1{
+  top: 20px;
+  right: 20px;
+  transform: rotate(6deg);
+}
+
+.s2{
+  top: 180px;
+  left: 20px;
+  transform: rotate(-6deg);
+}
+
