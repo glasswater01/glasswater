@@ -2,25 +2,20 @@
 /* imagen de fondo REAL */
 body{
   margin: 0;
-  background-image: url("media/bg.jpg");
-  background-size: contain;
-  background-position: top center;
-  background-repeat: no-repeat;
+  background: black;
 }
 
 .bg-image{
-  display: block;
   width: 100%;
-  height: auto;      /* mantiene proporción */
-  min-height: 100vh; /* llena la pantalla al inicio */
-  object-fit: cover;
+  height: auto;
+  display: block;
 }
 
-
-
-/* “escenario” donde colocamos stickers/cards */
 .stage{
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   padding: 22px;
 }
 
