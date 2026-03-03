@@ -3,9 +3,10 @@
 body{
   margin: 0;
   background-image: url("./media/bg.jpg");
-  background-size: 100% auto;   /* mantiene proporción */
-  background-repeat: no-repeat; /* no repite */
+  background-size: cover;      /* llena la pantalla */
   background-position: top center;
+  background-repeat: no-repeat;
+  background-color: black;     /* por si acaso */
 }
 
 .bg-image{
@@ -22,8 +23,7 @@ body{
 .stage{
   position: relative;
   padding: 22px;
-  font-family: Arial, sans-serif;
-  color: #fff;
+  min-height: 100vh;   /* mínimo alto pantalla */
 }
 
 /* Tarjetas tipo papel */
