@@ -58,23 +58,6 @@ body{
   box-shadow: 0 18px 40px rgba(0,0,0,.25);
 }
 
-.sticker.title{
-  top: 18px;
-  left: 18px;
-  transform: rotate(-2deg);
-}
-
-.sticker.title h1{
-  margin: 0;
-  font-size: 22px;
-  letter-spacing: .2px;
-}
-
-.sticker.title p{
-  margin: 4px 0 0;
-  font-size: 12px;
-  opacity: .8;
-}
 
 .sticker.music{
   top: 20px;
@@ -93,11 +76,6 @@ body{
   width: 100%;
 }
 
-/* Card presentación */
-.about{
-  top: 170px;
-  left: 26px;
-}
 
 /* Chips (links como pegatinas/botones) */
 
