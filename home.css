@@ -3,7 +3,7 @@
 body{
   margin: 0;
   background-image: url("media/bg.jpg");
-  background-size: 100% auto;   /* 🔥 muestra toda la imagen */
+  background-size: contain;
   background-position: top center;
   background-repeat: no-repeat;
 }
