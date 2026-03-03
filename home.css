@@ -1,5 +1,13 @@
 /* Fondo con imagen (cámbiala por la tuya) */
 /* imagen de fondo REAL */
+body{
+  margin: 0;
+  background-image: url("./media/bg.jpg");
+  background-size: 100% auto;   /* mantiene proporción */
+  background-repeat: no-repeat; /* no repite */
+  background-position: top center;
+}
+
 .bg-image{
   display: block;
   width: 100%;
