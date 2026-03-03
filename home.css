@@ -1,16 +1,11 @@
 /* Fondo con imagen (cámbiala por la tuya) */
 /* imagen de fondo REAL */
 .bg-image{
-  position: absolute;
-  top: 0;
-  left: 0;
-
+  display: block;
   width: 100%;
-  height: auto;          /* 🔥 mantiene proporción */
-  min-height: 100vh;     /* 🔥 llena la pantalla al inicio */
-
-  object-fit: cover;     /* llena el ancho sin deformar */
-  z-index: -2;
+  height: auto;      /* mantiene proporción */
+  min-height: 100vh; /* llena la pantalla al inicio */
+  object-fit: cover;
 }
 
 
