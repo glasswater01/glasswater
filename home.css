@@ -100,20 +100,7 @@ body{
 }
 
 /* Chips (links como pegatinas/botones) */
-.chip{
-  position: absolute;
-  color: #1a73e8;
-  text-decoration: underline;
-  font-size: 16px;
-  font-weight: 500;
-}
 
-.c1{ top: 360px; left: 30px; }
-.c2{ top: 410px; left: 30px; }
-.c3{ top: 460px; left: 30px; }
-
-.c4{ top: 360px; left: 160px; }
-.c5{ top: 410px; left: 160px; }
 
 /* Stickers imagen */
 .img-sticker{
@@ -154,4 +141,22 @@ body{
 .overlay{
   position: absolute;
   inset: 0;
+}
+
+.links{
+  margin-top: 380px;      /* ajusta según donde lo quieras */
+  display: flex;
+  justify-content: center;
+  gap: 30px;              /* espacio entre links */
+  font-size: 18px;
+}
+
+.links a{
+  color: #1a73e8;
+  text-decoration: underline;
+  transition: opacity 0.2s ease;
+}
+
+.links a:hover{
+  opacity: 0.6;
 }
