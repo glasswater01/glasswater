@@ -2,12 +2,10 @@
 /* imagen de fondo REAL */
 body{
   margin: 0;
-  background-image: url("./media/bg.jpg");
-  background-size: cover;      /* llena la pantalla */
+  background-image: url("media/bg.jpg");
+  background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
-  background-color: black;     /* por si acaso */
-  background-attachment: scroll;
 }
 
 .bg-image{
