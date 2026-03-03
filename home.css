@@ -3,7 +3,7 @@
 body{
   margin: 0;
   background-image: url("media/bg.jpg");
-  background-size: cover;
+  background-size: 100% auto;   /* 🔥 muestra toda la imagen */
   background-position: top center;
   background-repeat: no-repeat;
 }
@@ -22,7 +22,6 @@ body{
 .stage{
   position: relative;
   padding: 22px;
-  min-height: 100vh;   /* mínimo alto pantalla */
 }
 
 /* Tarjetas tipo papel */
