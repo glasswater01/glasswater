@@ -102,15 +102,10 @@ body{
 /* Chips (links como pegatinas/botones) */
 .chip{
   position: absolute;
-  display: inline-block;
-  padding: 9px 12px;
-  border-radius: 999px;
-  background: rgba(0,0,0,.6);
-  border: 1px solid rgba(255,255,255,.25);
   color: #1a73e8;
   text-decoration: underline;
-  font-size: 13px;
-  backdrop-filter: blur(6px);
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .c1{ top: 360px; left: 30px; }
