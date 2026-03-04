@@ -199,13 +199,13 @@ img[src*="webneko"] {
   z-index: 10000;
 
   font-size: 14px;
-  text-decoration: none;
+  font-family: inherit;
   color: #1D6AEC;
+  text-decoration: underline;
 
-  background: rgba(255,255,255,0.9);
-  padding: 6px 12px;
-  border-radius: 999px;
-
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
