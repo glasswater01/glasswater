@@ -121,15 +121,26 @@ body {
 /* Día actual sin bola azul, solo número visible */
 /* Día actual: círculo transparente con número negro */
 .highlight > div {
-  background-color: transparent;  /* la “bola” deja ver el fondo */
-  color: black;                   /* número negro igual que los demás días */
+  /* mantiene tamaño y forma circular */
   width: 28px;
   height: 28px;
-  border-radius: 50%;             /* mantiene la forma circular */
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(0,0,0,0.1); /* opcional: borde sutil para delimitar la bola */
+
+  /* número en negro */
+  color: black;
+
+  /* fondo transparente recortando la foto de abajo */
+  background-color: transparent;
+
+  /* 👇 esto permite que se vea el fondo que está debajo del .calendar */
+  backdrop-filter: none;        /* elimina blur */
+  -webkit-backdrop-filter: none;
+
+  /* opcional: contorno fino para que la bola se note */
+  border: 1px solid rgba(0,0,0,0.1);
 }
 /* Clock */
 .clock {
