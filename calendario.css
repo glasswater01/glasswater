@@ -104,14 +104,18 @@ body {
 }
 
 /* Day */
+/* Días del calendario: fondo transparente para ver la foto */
 .day {
   position: relative;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(4px);
+  border: 1px solid rgba(0, 0, 0, 0.1); /* opcional: contorno sutil */
+  
+  background-color: transparent;  /* ❌ antes era blanco semitransparente */
+  backdrop-filter: none;          /* ❌ elimina blur */
+
   padding: 8px;
   font-size: 15px;
   font-weight: 600;
+
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
