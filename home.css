@@ -79,3 +79,17 @@ body{
 .links a:hover{
   opacity: 0.6;
 }
+#playBtn{
+  background: none;        /* quita el fondo */
+  border: none;            /* quita el borde */
+  padding: 0;              /* quita el espacio interno */
+  color: #1a73e8;          /* mismo azul que los links */
+  font-size: 18px;         /* igual que los otros */
+  text-decoration: underline;
+  cursor: pointer;
+  font-family: inherit;   /* usa la misma fuente */
+}
+
+#playBtn:hover{
+  opacity: 0.6;            /* mismo hover que los links */
+}
