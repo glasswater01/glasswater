@@ -118,17 +118,16 @@ body {
 }
 
 /* Today highlight */
+/* Día actual sin bola azul, solo número visible */
 .highlight > div {
-  background-color: #1D6AEC;
-  color: white;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: transparent; /* transparente para que se vea la foto */
+  color: #1D6AEC;               /* opcional: azul para resaltar el número */
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  display: inline-block;
+  padding: 2px;                 /* opcional: un poco de espacio alrededor del número */
 }
-
 /* Clock */
 .clock {
   font-size: 12px;
