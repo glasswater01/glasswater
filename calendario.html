@@ -10,48 +10,50 @@
   <!-- BOTÓN VOLVER -->
   <a href="./" class="back-button">← volver</a>
 
-  <!-- CALENDARIO (UNO SOLO) -->
-  <div class="calendar">
+  <!-- WRAPPER QUE CENTRA EL CALENDARIO -->
+  <div class="page">
+    <div class="calendar">
 
-    <!-- CABECERA -->
-    <div class="container">
-      <div class="caltitle">
-        <span id="japanese-month"></span>
+      <!-- CABECERA -->
+      <div class="container">
+        <div class="caltitle">
+          <span id="japanese-month"></span>
+        </div>
+
+        <div class="inblock">
+          <div id="fullDate1"></div>
+          <div id="fullDate2"></div>
+        </div>
+
+        <div class="calbar">
+          <button id="prev-month">‹</button>
+          <button id="next-month">›</button>
+        </div>
       </div>
 
-      <div class="inblock">
-        <div id="fullDate1"></div>
-        <div id="fullDate2"></div>
+      <div class="space"></div>
+
+      <!-- RELOJES -->
+      <div class="clock">
+        <span id="clock-left"></span>
+        <span id="clock-right"></span>
       </div>
 
-      <div class="calbar">
-        <button id="prev-month">‹</button>
-        <button id="next-month">›</button>
+      <!-- DÍAS DE LA SEMANA -->
+      <div class="days-of-week">
+        <div class="day-of-week">L</div>
+        <div class="day-of-week">M</div>
+        <div class="day-of-week">X</div>
+        <div class="day-of-week">J</div>
+        <div class="day-of-week">V</div>
+        <div class="day-of-week">S</div>
+        <div class="day-of-week">D</div>
       </div>
+
+      <!-- DÍAS DEL MES -->
+      <div id="calendarDays" class="days"></div>
+
     </div>
-
-    <div class="space"></div>
-
-    <!-- RELOJES -->
-    <div class="clock">
-      <span id="clock-left"></span>
-      <span id="clock-right"></span>
-    </div>
-
-    <!-- DÍAS DE LA SEMANA -->
-    <div class="days-of-week">
-      <div class="day-of-week">L</div>
-      <div class="day-of-week">M</div>
-      <div class="day-of-week">X</div>
-      <div class="day-of-week">J</div>
-      <div class="day-of-week">V</div>
-      <div class="day-of-week">S</div>
-      <div class="day-of-week">D</div>
-    </div>
-
-    <!-- DÍAS DEL MES -->
-    <div id="calendarDays" class="days"></div>
-
   </div>
 
   <script src="calendario.js"></script>
