@@ -26,6 +26,22 @@
 
 
   </main>
+    <audio id="audioPlayer" src="media/song.mp3"></audio>
+
+<script>
+  const playBtn = document.getElementById("playBtn");
+  const audio = document.getElementById("audioPlayer");
+
+  playBtn.addEventListener("click", () => {
+    if (audio.paused) {
+      audio.play();
+      playBtn.classList.add("playing");
+    } else {
+      audio.pause();
+      playBtn.classList.remove("playing");
+    }
+  });
+</script>
 </body>
 </html>
 
