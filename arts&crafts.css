@@ -70,7 +70,7 @@ body, html {
   position: absolute;
   width: auto;           /* mantiene proporción original */
   height: auto;          /* mantiene proporción original */
-  max-width: 15vw;       /* aprox 15% del ancho de la pantalla */
+  max-width: 20vw;       /* aprox 15% del ancho de la pantalla */
   z-index: 2;
   
   top: 50%;              /* centrado vertical */
