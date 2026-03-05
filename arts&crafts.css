@@ -47,24 +47,36 @@ body, html {
 }
 
 /* Contenedor de fotos encima del fondo */
-.crafts-container {
+/* Contenedor de la sección de artes y crafts */
+.arts-container {
   position: relative;
-  z-index: 1;          /* encima de la imagen */
-  width: 100%;
-  min-height: 100vh;   /* permite scroll si hay muchas fotos */
-  padding: 40px 20px;  /* opcional, espacio para fotos */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; /* para que nada se salga del viewport */
 }
 
-/* Fotos flotantes de distintos tamaños */
-.crafts-container img {
-  max-width: 300px;  /* puedes variar */
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  object-fit: cover;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+/* Imagen de fondo */
+.background {
+  position: absolute;
+  inset: 0;
+  background-image: url("./media/craftsbg.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+/* Foto superpuesta */
+.photo {
+  position: absolute;
+  width: auto;           /* mantiene proporción original */
+  height: auto;          /* mantiene proporción original */
+  max-width: 15vw;       /* aprox 15% del ancho de la pantalla */
+  z-index: 2;
+  
+  top: 50%;              /* centrado vertical */
+  left: 5%;              /* margen desde el borde izquierdo */
+  transform: translateY(-50%); /* centrado exacto vertical */
+  
+  box-shadow: none;      /* sin sombras */
+  border: none;          /* sin bordes */
 }
