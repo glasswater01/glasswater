@@ -197,21 +197,22 @@ img[src*="webneko"] {
 
 /* Botón volver / home unificado */
 .back-button,
-.home-btn {
+.home-btn{
   position: fixed;
-  top: 20px; /* separación de la esquina superior */
-  left: 20px; /* separacion izquierda */
-  z-index: 10000;
+  top: 15px;      /* 👈 arriba */
+  left: 15px;     /* 👈 izquierda */
+  z-index: 1000;
 
-  font-family: inherit;
-  font-size: 14px;
-  color: #1D6AEC;
+  color: #1a73e8;
   text-decoration: underline;
+  font-size: 16px;
+  font-family: inherit;
 
   background: none;
-  padding: 0;
-  border-radius: 0;
-  box-shadow: none;
+}
+
+.home-btn:hover{
+  opacity: 0.6;
 }
 
 /* Centrar calendario en la pantalla */
