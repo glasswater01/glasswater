@@ -1,92 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Arts & Crafts</title>
-
-<style>
-
-html, body{
-    margin:0;
-    padding:0;
-}
-
-/* Fondo principal */
-.background{
-    background-image: url("media/craftsbg.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    width:100%;
-    height:200vh; /* permite scroll largo */
-}
-
-<a href="./" class="back-button">volver</a>
-
-/* Contenedor de fotos */
-.photo-container{
-    position:relative;
-    width:100%;
-    height:200vh;
-}
-
-/* Fotos flotantes */
-.photo{
-    position:absolute;
-}
-
-.photo img{
-    width:100%;
-    border-radius:10px;
-}
-
-/* posiciones ejemplo */
-
-.photo1{
-    width:300px;
-    top:200px;
-    left:10%;
-}
-
-.photo2{
-    width:220px;
-    top:500px;
-    left:50%;
-}
-
-.photo3{
-    width:260px;
-    top:900px;
-    left:20%;
-}
-
-</style>
+  <meta charset="UTF-8">
+  <title>Arts & Crafts</title>
+  <link rel="stylesheet" href="arts&crafts.css">
 </head>
-
 <body>
 
-<a href="index.html" class="back-button">← Volver</a>
+  <!-- BOTÓN VOLVER -->
+  <a href="./" class="back-button">volver</a>
 
-<div class="background">
+  <!-- FOTO DE FONDO -->
+  <div class="bg-full"></div>
 
-    <div class="photo-container">
-
-        <div class="photo photo1">
-            <img src="images/ceramica1.jpg">
-        </div>
-
-        <div class="photo photo2">
-            <img src="images/ceramica2.jpg">
-        </div>
-
-        <div class="photo photo3">
-            <img src="images/ceramica3.jpg">
-        </div>
-
-    </div>
-
-</div>
+  <!-- CONTENEDOR DE FOTOS -->
+  <div class="crafts-container">
+    <img src="./media/photo1.jpg" alt="Foto 1">
+    <img src="./media/photo2.jpg" alt="Foto 2">
+    <img src="./media/photo3.jpg" alt="Foto 3">
+    <img src="./media/photo4.jpg" alt="Foto 4">
+    <!-- Añade más fotos según quieras -->
+  </div>
 
 </body>
 </html>
