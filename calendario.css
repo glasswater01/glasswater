@@ -126,6 +126,7 @@ body {
 
 /* Today highlight */
 .highlight > div {
+  position: relative;
   width: 28px;
   height: 28px;
   border-radius: 50%;
@@ -133,11 +134,17 @@ body {
   align-items: center;
   justify-content: center;
 
-  color: black;
-  background-color: transparent; /* recorte que deja ver la foto */
-  border: 1px solid rgba(0,0,0,0.1);
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
+  color: black;             /* número en negro */
+  background-color: transparent; /* ❌ fondo transparente */
+  border: 1px solid rgba(0,0,0,0.1); /* opcional, contorno sutil */
+
+  /* La magia para que la casilla de fondo se vea: */
+  z-index: 2;
+}
+
+.day-number {
+  position: relative;
+  z-index: 3; /* número encima del círculo transparente */
 }
 
 /* Clock */
