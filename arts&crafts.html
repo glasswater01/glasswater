@@ -3,22 +3,101 @@
 <head>
 <meta charset="UTF-8">
 <title>Arts & Crafts</title>
-<link rel="stylesheet" href="artscrafts.css">
+
+<style>
+
+html, body{
+    margin:0;
+    padding:0;
+}
+
+/* Fondo principal */
+.background{
+    background-image: url("images/ceramica-fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width:100%;
+    height:200vh; /* permite scroll largo */
+}
+
+/* Botón volver */
+.back-button{
+    position:fixed;
+    top:20px;
+    left:20px;
+    z-index:10;
+
+    padding:10px 16px;
+    background:white;
+    color:black;
+    text-decoration:none;
+    font-family:Arial;
+    border-radius:6px;
+}
+
+/* Contenedor de fotos */
+.photo-container{
+    position:relative;
+    width:100%;
+    height:200vh;
+}
+
+/* Fotos flotantes */
+.photo{
+    position:absolute;
+}
+
+.photo img{
+    width:100%;
+    border-radius:10px;
+}
+
+/* posiciones ejemplo */
+
+.photo1{
+    width:300px;
+    top:200px;
+    left:10%;
+}
+
+.photo2{
+    width:220px;
+    top:500px;
+    left:50%;
+}
+
+.photo3{
+    width:260px;
+    top:900px;
+    left:20%;
+}
+
+</style>
 </head>
 
 <body>
 
-<a href="./" class="back-button">← volver</a>
+<a href="index.html" class="back-button">← Volver</a>
 
-<div class="page">
+<div class="background">
 
-  <!-- FOTO DE FONDO QUE HACE SCROLL -->
-  <img src="./media/craftsbg.jpg" class="background">
+    <div class="photo-container">
 
-  <!-- IMÁGENES DE CERÁMICA -->
-  <img src="./media/pieza1.jpg" class="craft img1">
-  <img src="./media/pieza2.jpg" class="craft img2">
-  <img src="./media/pieza3.jpg" class="craft img3">
+        <div class="photo photo1">
+            <img src="images/ceramica1.jpg">
+        </div>
+
+        <div class="photo photo2">
+            <img src="images/ceramica2.jpg">
+        </div>
+
+        <div class="photo photo3">
+            <img src="images/ceramica3.jpg">
+        </div>
+
+    </div>
 
 </div>
 
