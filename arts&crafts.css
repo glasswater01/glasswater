@@ -8,7 +8,7 @@ body{
 .bg-full{
   position: fixed;
   inset: 0;
-  background-image: url("./media/bg.jpg");
+  background-image: url("./media/craftsbg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
