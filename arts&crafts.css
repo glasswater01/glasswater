@@ -53,8 +53,8 @@ body{
   position: absolute;
   top: 120px;
   left: 30%;
-  width: 180px;
-  height: 180px;   /* cuadrado */
+  width: 200px;
+  height: 200px;   /* cuadrado */
   object-fit: cover; /* recorta la imagen */
   z-index: 3;
 }
