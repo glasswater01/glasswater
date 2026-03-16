@@ -80,3 +80,9 @@ body, html {
   box-shadow: none;      /* sin sombras */
   border: none;          /* sin bordes */
 }
+
+video{
+  display:block;
+  margin:40px auto;
+  border-radius:12px;
+}
