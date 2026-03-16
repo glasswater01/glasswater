@@ -36,8 +36,8 @@ body{
 /* video pequeño */
 .craft-video{
   position: absolute;
-  top: 120px;
-  left: 50%;
+  top: 100px;
+  left: 30%;
   transform: translateX(-50%);
 
   width: 200px;
