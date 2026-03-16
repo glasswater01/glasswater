@@ -47,7 +47,9 @@ body{
 /* fotos pequeñas */
 .photo{
   position: absolute;
-  width: 140px;
+  top: 120px;
+  left: 70%;
+  width: 200px;
   height: auto;
   z-index: 3;
   border-radius: 10px;
