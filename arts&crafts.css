@@ -44,7 +44,7 @@ body{
   height: 200px;      /* cuadrado */
 
   object-fit: cover;  /* recorta el video */
-  border-radius: 10px;
+  border-radius: 0px;
 }
 
 /* fotos pequeñas */
@@ -55,7 +55,7 @@ body{
   width: 200px;
   height: auto;
   z-index: 3;
-  border-radius: 10px;
+  border-radius: 0px;
 }
 
 /* posiciones de cada foto */
