@@ -1,88 +1,28 @@
-/* Reset y caja de estilos */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Arts & Crafts</title>
+  <link rel="stylesheet" href="arts&crafts.css">
+</head>
+<body>
 
-/* Página completa */
-body, html {
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-  font-family: Arial, sans-serif;
-}
+  <a href="./" class="back-button">← volver</a>
 
-/* Imagen de fondo a pantalla completa */
-.bg-full {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("./media/craftsbg.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 0;
-}
+  <div class="bg-full"></div>
 
-/* Botón volver encima de la imagen */
-.back-button {
-  position: fixed;
-  top: 20px;     /* ajusta según quieras desde arriba */
-  left: 20px;    /* ajusta según quieras desde la izquierda */
-  z-index: 10;
+  <main class="stage">
+    <h2>arts & crafts</h2>
 
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  color: #1D6AEC;
-  text-decoration: underline;
+    <video class="craft-video" controls>
+      <source src="./media/video.mp4" type="video/mp4">
+      Tu navegador no soporta video.
+    </video>
 
-  background: none; /* nada de fondo */
-  padding: 0;       /* sin padding extra */
-  border: none;     /* sin borde */
-  border-radius: 0;
-  cursor: pointer;
-}
+    <div class="crafts-container">
+      <img src="./media/photo1.JPG" alt="Foto 1" class="photo left">
+    </div>
+  </main>
 
-/* Contenedor de fotos encima del fondo */
-/* Contenedor de la sección de artes y crafts */
-.arts-container {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden; /* para que nada se salga del viewport */
-}
-
-/* Imagen de fondo */
-.background {
-  position: absolute;
-  inset: 0;
-  background-image: url("./media/craftsbg.jpg");
-  background-size: cover;
-  background-position: center;
-  z-index: 1;
-}
-
-/* Foto superpuesta */
-.photo {
-  position: absolute;
-  width: auto;           /* mantiene proporción original */
-  height: auto;          /* mantiene proporción original */
-  max-width: 20vw;       /* aprox 15% del ancho de la pantalla */
-  z-index: 2;
-  
-  top: 50%;              /* centrado vertical */
-  left: 5%;              /* margen desde el borde izquierdo */
-  transform: translateY(-50%); /* centrado exacto vertical */
-  
-  box-shadow: none;      /* sin sombras */
-  border: none;          /* sin bordes */
-}
-
-video{
-  display:block;
-  margin:40px auto;
-  border-radius:12px;
-}
+</body>
+</html>
