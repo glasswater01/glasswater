@@ -16,15 +16,17 @@ body{
 }
 
 /* botón volver */
-.back-button{
+.back-button,
+.home-btn{
   position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 10;
+  top: 15px;      /* 👈 arriba */
+  left: 15px;     /* 👈 izquierda */
+  z-index: 1000;
+
   color: #1a73e8;
   text-decoration: underline;
-  font-size: 18px;
-}
+  font-size: 16px;
+  font-family: inherit;
 
 /* contenedor general */
 .stage{
