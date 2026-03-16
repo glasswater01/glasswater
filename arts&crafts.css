@@ -50,6 +50,9 @@ body{
 /* fotos pequeñas */
 .photo{
   position: absolute;
+  position: absolute;
+  top: 120px;
+  left: 30%;
   width: 180px;
   height: 180px;   /* cuadrado */
   object-fit: cover; /* recorta la imagen */
