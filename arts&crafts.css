@@ -29,53 +29,30 @@ body{
   font-family: inherit;
 }
 
-/* contenedor general */
+/* contenedor principal */
 .stage{
   position: relative;
   z-index: 2;
   min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+
+  padding-top: 120px;
 }
 
-/* video pequeño */
+/* video cuadrado */
 .craft-video{
-  position: absolute;
-  top: 120px;
-  left: 30%;
-  transform: translateX(-50%);
   width: 200px;
   height: 200px;
   object-fit: cover;
-  border-radius: 0px;
 }
 
-/* fotos pequeñas */
+/* fotos cuadradas */
 .photo{
-  position: absolute;
-  top: 120px;
-  left: 30%;
   width: 200px;
   height: 200px;
   object-fit: cover;
-  z-index: 3;
-}
-
-/* posiciones de cada foto */
-.p1{
-  top: 260px;
-  left: 80px;
-}
-
-.p2{
-  top: 180px;
-  right: 100px;
-}
-
-.p3{
-  top: 480px;
-  left: 180px;
-}
-
-.p4{
-  top: 420px;
-  right: 140px;
 }
