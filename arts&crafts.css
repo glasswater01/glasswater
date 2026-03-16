@@ -50,12 +50,10 @@ body{
 /* fotos pequeñas */
 .photo{
   position: absolute;
-  top: 120px;
-  left: 70%;
-  width: 200px;
-  height: auto;
+  width: 180px;
+  height: 180px;   /* cuadrado */
+  object-fit: cover; /* recorta la imagen */
   z-index: 3;
-  border-radius: 0px;
 }
 
 /* posiciones de cada foto */
