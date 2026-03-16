@@ -19,14 +19,15 @@ body{
 .back-button,
 .home-btn{
   position: fixed;
-  top: 15px;      /* 👈 arriba */
-  left: 15px;     /* 👈 izquierda */
+  top: 15px;
+  left: 15px;
   z-index: 1000;
 
   color: #1a73e8;
   text-decoration: underline;
   font-size: 16px;
   font-family: inherit;
+}
 
 /* contenedor general */
 .stage{
@@ -41,23 +42,20 @@ body{
   top: 120px;
   left: 30%;
   transform: translateX(-50%);
-
   width: 200px;
-  height: 200px;      /* cuadrado */
-
-  object-fit: cover;  /* recorta el video */
+  height: 200px;
+  object-fit: cover;
   border-radius: 0px;
 }
 
 /* fotos pequeñas */
 .photo{
   position: absolute;
-  position: absolute;
   top: 120px;
   left: 30%;
   width: 200px;
-  height: 200px;   /* cuadrado */
-  object-fit: cover; /* recorta la imagen */
+  height: 200px;
+  object-fit: cover;
   z-index: 3;
 }
 
