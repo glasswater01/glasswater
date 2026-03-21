@@ -4,6 +4,38 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="arts&crafts.css">
 </head>
+<script>
+const audio = document.getElementById("audio");
+const btn = document.getElementById("playBtn");
+
+/* recuperar estado */
+const wasPlaying = localStorage.getItem("musicPlaying");
+const savedTime = localStorage.getItem("musicTime");
+
+if(savedTime){
+  audio.currentTime = savedTime;
+}
+
+if(wasPlaying === "true"){
+  audio.play().catch(() => {});
+}
+
+/* botón */
+btn.addEventListener("click", () => {
+  if(audio.paused){
+    audio.play();
+    localStorage.setItem("musicPlaying", "true");
+  }else{
+    audio.pause();
+    localStorage.setItem("musicPlaying", "false");
+  }
+});
+
+/* guardar tiempo continuamente */
+audio.addEventListener("timeupdate", () => {
+  localStorage.setItem("musicTime", audio.currentTime);
+});
+</script>
 <body>
 
   <a href="./" class="back-button">← volver</a>
