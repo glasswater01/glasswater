@@ -32,14 +32,29 @@
   const playBtn = document.getElementById("playBtn");
   const audio = document.getElementById("audioPlayer");
 
+  // recuperar estado guardado
+  const wasPlaying = localStorage.getItem("musicPlaying");
+  const savedTime = localStorage.getItem("musicTime");
+  if (savedTime) audio.currentTime = savedTime;
+  if (wasPlaying === "true") {
+    audio.play().catch(() => {});
+    playBtn.classList.add("playing");
+  }
+
   playBtn.addEventListener("click", () => {
     if (audio.paused) {
       audio.play();
       playBtn.classList.add("playing");
+      localStorage.setItem("musicPlaying", "true");
     } else {
       audio.pause();
       playBtn.classList.remove("playing");
+      localStorage.setItem("musicPlaying", "false");
     }
+  });
+
+  audio.addEventListener("timeupdate", () => {
+    localStorage.setItem("musicTime", audio.currentTime);
   });
 </script>
 </body>
