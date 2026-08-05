@@ -23,6 +23,7 @@ body {
   background-image: url("./media/calendariobg.jpg");
   background-size: cover;
   background-position: center bottom;
+  background-attachment: fixed;
   background-repeat: no-repeat;
 
   border-radius: 20px;
@@ -126,19 +127,19 @@ body {
 
 /* Today highlight */
 .highlight > div {
-  position: relative;
   width: 28px;
   height: 28px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  color: black;             /* número en negro */
-  background-color: transparent; /* ❌ fondo transparente */
-  border: 1px solid rgba(0,0,0,0.1); /* opcional, contorno sutil */
-
-  /* La magia para que la casilla de fondo se vea: */
+  color: black;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background-image: url("./media/calendariobg.jpg");
+  background-size: cover;
+  background-position: center bottom; /* 👈 mismo valor que en .calendar */
+  background-attachment: fixed;       /* 👈 clave para que coincidan */
+  background-color: transparent;
   z-index: 2;
 }
 
