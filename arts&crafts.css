@@ -67,3 +67,12 @@ body{
   height: 200px;
   object-fit: cover;
 }
+.craft-video3{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin: 40px auto;
+}
