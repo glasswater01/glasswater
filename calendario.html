@@ -6,39 +6,31 @@
   <link rel="stylesheet" href="calendario.css">
 </head>
 <body>
-
   <!-- BOTÓN VOLVER -->
   <a href="./" class="back-button">← volver</a>
-
   <!-- WRAPPER QUE CENTRA EL CALENDARIO -->
   <div class="page">
     <div class="calendar">
-
       <!-- CABECERA -->
       <div class="container">
         <div class="caltitle">
           <span id="japanese-month"></span>
         </div>
-
         <div class="inblock">
           <div id="fullDate1"></div>
           <div id="fullDate2"></div>
         </div>
-
         <div class="calbar">
           <button id="prev-month">‹</button>
           <button id="next-month">›</button>
         </div>
       </div>
-
       <div class="space"></div>
-
       <!-- RELOJES -->
       <div class="clock">
         <span id="clock-left"></span>
         <span id="clock-right"></span>
       </div>
-
       <!-- DÍAS DE LA SEMANA -->
       <div class="days-of-week">
         <div class="day-of-week">L</div>
@@ -49,13 +41,26 @@
         <div class="day-of-week">S</div>
         <div class="day-of-week">D</div>
       </div>
-
       <!-- DÍAS DEL MES -->
       <div id="calendarDays" class="days"></div>
-
     </div>
   </div>
-
   <script src="calendario.js"></script>
+
+  <audio id="audioPlayer" src="media/song.mp3"></audio>
+  <script>
+    const audio = document.getElementById("audioPlayer");
+
+    const wasPlaying = localStorage.getItem("musicPlaying");
+    const savedTime = localStorage.getItem("musicTime");
+    if (savedTime) audio.currentTime = savedTime;
+    if (wasPlaying === "true") {
+      audio.play().catch(() => {});
+    }
+
+    audio.addEventListener("timeupdate", () => {
+      localStorage.setItem("musicTime", audio.currentTime);
+    });
+  </script>
 </body>
 </html>
