@@ -27,7 +27,7 @@
     }
   </style>
 </head>
-
+<body>
 
   <div class="galeria" id="galeria">
     <img src="./media/IMG_0327_3.jpg" loading="lazy">
@@ -100,17 +100,24 @@
     <img src="./media/IMG_2707.jpg" loading="lazy">
     <img src="./media/IMG_2708.jpg" loading="lazy">
     <img src="./media/8.jpg" loading="lazy">
-
-
-
-
   </div>
 
-
-</body>
   <a href="./" class="home-btn">← volver</a>
-</html>
 
+  <audio id="audioPlayer" src="media/song.mp3"></audio>
+  <script>
+    const audio = document.getElementById("audioPlayer");
 
+    const wasPlaying = localStorage.getItem("musicPlaying");
+    const savedTime = localStorage.getItem("musicTime");
+    if (savedTime) audio.currentTime = savedTime;
+    if (wasPlaying === "true") {
+      audio.play().catch(() => {});
+    }
+
+    audio.addEventListener("timeupdate", () => {
+      localStorage.setItem("musicTime", audio.currentTime);
+    });
+  </script>
 </body>
 </html>
