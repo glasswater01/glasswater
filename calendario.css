@@ -22,7 +22,7 @@ body {
 
   background-image: url("./media/calendariobg.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
 
   border-radius: 20px;
