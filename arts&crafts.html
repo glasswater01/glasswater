@@ -4,38 +4,21 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="arts&crafts.css">
 </head>
-<script>
-const audio = document.getElementById("audio");
-const btn = document.getElementById("playBtn");
+<audio id="audioPlayer" src="media/song.mp3"></audio>
+  <script>
+    const audio = document.getElementById("audioPlayer");
 
-/* recuperar estado */
-const wasPlaying = localStorage.getItem("musicPlaying");
-const savedTime = localStorage.getItem("musicTime");
+    const wasPlaying = localStorage.getItem("musicPlaying");
+    const savedTime = localStorage.getItem("musicTime");
+    if (savedTime) audio.currentTime = savedTime;
+    if (wasPlaying === "true") {
+      audio.play().catch(() => {});
+    }
 
-if(savedTime){
-  audio.currentTime = savedTime;
-}
-
-if(wasPlaying === "true"){
-  audio.play().catch(() => {});
-}
-
-/* botón */
-btn.addEventListener("click", () => {
-  if(audio.paused){
-    audio.play();
-    localStorage.setItem("musicPlaying", "true");
-  }else{
-    audio.pause();
-    localStorage.setItem("musicPlaying", "false");
-  }
-});
-
-/* guardar tiempo continuamente */
-audio.addEventListener("timeupdate", () => {
-  localStorage.setItem("musicTime", audio.currentTime);
-});
-</script>
+    audio.addEventListener("timeupdate", () => {
+      localStorage.setItem("musicTime", audio.currentTime);
+    });
+  </script>
 <body>
 
   <a href="./" class="back-button">← volver</a>
