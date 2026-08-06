@@ -1,8 +1,13 @@
 body{
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #fff;
   color: #111;
+  background-image: url("./media/horse1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
 .back-button{
