@@ -32,15 +32,15 @@ body{
 }
 
 .proyecto-link{
-  color: #111;
-  text-decoration: none;
+  color: #1a73e8;
+  text-decoration: underline;
   font-size: 18px;
   letter-spacing: 0.5px;
   transition: opacity 0.2s ease;
 }
 
 .proyecto-link:hover{
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 /* zona central de preview */
