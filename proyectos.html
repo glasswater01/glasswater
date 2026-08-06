@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyectos</title>
+  <link rel="stylesheet" href="proyectos.css">
+</head>
+<body>
+  <a href="./" class="back-button">← volver</a>
+
+  <div class="proyectos-page">
+    <nav class="proyectos-list">
+      <a href="proyecto-horse.html" class="proyecto-link" data-img="./media/placeholder1.jpg">
+        BUT MAMA I AM A HORSE!!!!!!!
+      </a>
+      <a href="proyecto-nina.html" class="proyecto-link" data-img="./media/placeholder2.jpg">
+        LA NIÑA
+      </a>
+    </nav>
+
+    <div class="preview-stage">
+      <img id="previewImg" class="preview-img" src="" alt="">
+    </div>
+  </div>
+
+  <audio id="audioPlayer" src="media/song.mp3"></audio>
+  <script>
+    const audio = document.getElementById("audioPlayer");
+    const wasPlaying = localStorage.getItem("musicPlaying");
+    const savedTime = localStorage.getItem("musicTime");
+    if (savedTime) audio.currentTime = savedTime;
+    if (wasPlaying === "true") {
+      audio.play().catch(() => {});
+    }
+    audio.addEventListener("timeupdate", () => {
+      localStorage.setItem("musicTime", audio.currentTime);
+    });
+  </script>
+
+  <script src="proyectos.js"></script>
+</body>
+</html>
