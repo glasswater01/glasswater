@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>But mama I am a horse</title>
+  <link rel="stylesheet" href="horse.css">
+</head>
+<body>
+  <a href="proyectos.html" class="back-button">← volver</a>
+
+  <main class="proyecto-stage">
+    <h1 class="proyecto-title">But mama I am a horse!!!!!!!</h1>
+
+    <p class="proyecto-text">
+      Escribe aquí la descripción del proyecto: de qué trata, cuándo lo hiciste,
+      técnica o materiales, y cualquier contexto que quieras dar.
+    </p>
+
+    <div class="media-grid">
+      <img src="./media/horse-placeholder1.jpg" alt="Foto 1" class="proyecto-media">
+      <img src="./media/horse-placeholder2.jpg" alt="Foto 2" class="proyecto-media">
+      <video class="proyecto-media" autoplay loop muted>
+        <source src="./media/horse-placeholder-video.mp4" type="video/mp4">
+      </video>
+    </div>
+  </main>
+
+  <audio id="audioPlayer" src="media/song.mp3"></audio>
+  <script>
+    const audio = document.getElementById("audioPlayer");
+    const wasPlaying = localStorage.getItem("musicPlaying");
+    const savedTime = localStorage.getItem("musicTime");
+    if (savedTime) audio.currentTime = savedTime;
+    if (wasPlaying === "true") {
+      audio.play().catch(() => {});
+    }
+    audio.addEventListener("timeupdate", () => {
+      localStorage.setItem("musicTime", audio.currentTime);
+    });
+  </script>
+</body>
+</html>
