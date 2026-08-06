@@ -1,0 +1,65 @@
+body{
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.back-button{
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1000;
+  color: #1a73e8;
+  text-decoration: underline;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.proyectos-page{
+  display: flex;
+  height: 100vh;
+}
+
+/* lista de la izquierda */
+.proyectos-list{
+  width: 280px;
+  padding: 120px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  z-index: 2;
+}
+
+.proyecto-link{
+  color: #111;
+  text-decoration: none;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  transition: opacity 0.2s ease;
+}
+
+.proyecto-link:hover{
+  opacity: 0.5;
+}
+
+/* zona central de preview */
+.preview-stage{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.preview-img{
+  max-width: 45vw;
+  max-height: 70vh;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.preview-img.visible{
+  opacity: 1;
+}
