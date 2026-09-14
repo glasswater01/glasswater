@@ -46,13 +46,6 @@ body{
   min-width: 0;
 }
 
-.cv-photo{
-  width: 240px;
-  max-width: 30vw;
-  height: auto;
-  flex-shrink: 0;
-}
-
 .cv-content h1{
   font-size: 36px;
   font-weight: 400;
