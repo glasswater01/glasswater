@@ -98,9 +98,14 @@ body{
 @media (max-width: 700px){
   .cv-content{
     flex-direction: column-reverse;
+    padding: 100px 24px 60px;
+    gap: 24px;
   }
   .cv-photo{
     width: 140px;
     max-width: 50vw;
+  }
+  .cv-content h1{
+    font-size: 26px;
   }
 }
