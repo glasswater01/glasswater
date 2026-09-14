@@ -11,47 +11,85 @@
 
   <main class="cv-stage">
     <div class="cv-content">
-      <h1>CV — Karmele Ustarroz</h1>
 
-      <h2>Personal details</h2>
-      <p>
-        Name: Karmele Ustarroz<br>
-        Email: <a href="mailto:k.ustarroz@gmail.com">k.ustarroz@gmail.com</a><br>
-        Instagram: @karmele__<br>
-        Languages: Spanish (native), English (C1), German (C1), Catalan (basic)
+      <div class="cv-text">
+
+      <h1>karmele ustarroz</h1>
+
+      <p class="cv-location">barcelona</p>
+
+      <p class="cv-bio">
+        Creative researcher and visual practitioner working across art direction, photography, and contemporary visual culture. Product Manager at Filmin and co-coordinator of a curatorial and workshop space in Horta-Guinardó. Her work investigates the intersection between contemporary art and philosophy, exploring how image, technology, and sensory stimulus construct and transform perception.
       </p>
 
-      <h2>Areas of research / interests</h2>
-      <p>
-        She investigates the intersection between contemporary art and philosophy, and how this relationship transforms our perception of ourselves. Her work combines a background in philosophy and aesthetics with an approach informed by neuroscience and cognition, paying particular attention to how perception is constructed and altered through image, technology, and sensory stimulus.
+      <p class="cv-contact">
+        k.ustarroz@gmail.com / @karmele__
       </p>
 
-      <h2>Academic background</h2>
-      <ul>
-        \Master's Degree in Digital Cultures & Emerging Media — UPF, 2026.<br>
-        \Bachelor's Degree in Philosophy, specializing in Contemporary Art and Aesthetics — UNED, 2023. Undergraduate thesis: research on contemporary art and technology, and how this intersection transforms perception and identity.<br>
-        \Diploma in Photography — IEFC, 2023. <br>
-      </ul>
+      <h2>academia</h2>
 
-      <h2>Professional positions</h2>
-      <p>
-        She currently works as a Product Manager at Filmin. She also co-directs a curatorial and workshop space in Guinardó (Barcelona) together with two friends.
+      <p class="cv-item">
+        / Máster en Cerebro y Cognición (2025)<br>
+        Universitat Pompeu Fabra<br>
+        Trabajo Fin de Máster desarrollado en el Multisensory Research Group (MRG), sobre cómo afectan estímulos de diferente congruencia al cerebro.
       </p>
 
-      <h2>Featured work</h2>
-      <p>
-        Styling and creative direction for La Niña, a dance piece created by Aurora Vallejo as her final project at the Institut del Teatre. To shape the piece, Aurora and Karmele researched its visual language together through a moodboard drawing on references such as Persona (Ingmar Bergman), Kate Bush, Issey Miyake, and The Strange Case of Angelica, which established the visual foundation of the presentation.
-      </p>
-      <p>
-        The piece explores a complex mother-daughter relationship, marked by moments of closeness and distance. Through projections, Aurora's face is overlaid with her mother's, using technology as a tool to materialize this shifting bond between them.
+      <p class="cv-item">
+        / Grado en Filosofía, especialización en Arte Contemporáneo y Estética (2023)<br>
+        UNED<br>
+        Trabajo Fin de Grado: investigación sobre arte contemporáneo y tecnología, y cómo esta intersección transforma la percepción y la identidad.
       </p>
 
-      <h2>Grants, residencies, and stays</h2>
-      <ul>
-        \Finalist (among the top three candidates, out of over a hundred) for the CCCB curatorial grant — resolved in 2026. <br>
-        \Grant to participate in the Founding Lab program — Ars Electronica, 2023 — deepening her engagement with the intersection of technology, culture, and experimental artistic practices. <br>
-      </ul>
+      <p class="cv-item">
+        / Grado en Fotografía (2023)<br>
+        IEFC
+      </p>
+
+      <h2>trabajo destacado</h2>
+
+      <p class="cv-item">
+        / Styling y dirección creativa para "La Niña", pieza de danza creada por Aurora Vallejo como trabajo final en el Institut del Teatre. La pieza explora una relación compleja entre madre e hija, usando proyectores para superponer la cara de Aurora con la de su madre.
+      </p>
+
+      <p class="cv-item">
+        / Dirección visual para "But mama I am a horse!!!", pieza de danza en colaboración con la coreógrafa María Landaribar, sobre foley y la fisicalidad de la escucha.
+      </p>
+
+      <h2>becas, residencias y estancias</h2>
+
+      <p class="cv-item">
+        / Finalista (entre las tres candidatas, entre más de cien) de la beca curatorial del CCCB — resuelta en 2026.
+      </p>
+
+      <p class="cv-item">
+        / Beca de participación en el Founding Lab — Ars Electronica, 2023.
+      </p>
+
+      <h2>idiomas</h2>
+
+      <p class="cv-item">
+        / Español (nativo), inglés (C1), alemán (C1), catalán (básico)
+      </p>
+
+      </div>
+
+      <img src="./media/cv-photo.jpg" alt="Karmele Ustarroz" class="cv-photo">
+
     </div>
   </main>
+
+  <audio id="audioPlayer" src="media/song.mp3"></audio>
+  <script>
+    const audio = document.getElementById("audioPlayer");
+    const wasPlaying = localStorage.getItem("musicPlaying");
+    const savedTime = localStorage.getItem("musicTime");
+    if (savedTime) audio.currentTime = savedTime;
+    if (wasPlaying === "true") {
+      audio.play().catch(() => {});
+    }
+    audio.addEventListener("timeupdate", () => {
+      localStorage.setItem("musicTime", audio.currentTime);
+    });
+  </script>
 </body>
 </html>
