@@ -45,7 +45,7 @@ body{
 }
 
 .cv-content h1{
-  font-size: 34px;
+  font-size: 15px;
   font-weight: 400;
   margin: 0 0 4px 0;
   text-transform: lowercase;
@@ -70,7 +70,7 @@ body{
 }
 
 .cv-content h2{
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   margin-top: 32px;
   margin-bottom: 14px;
