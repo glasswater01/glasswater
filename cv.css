@@ -47,9 +47,9 @@ body{
 }
 
 .cv-content h1{
-  font-size: 24px;
+  font-size: 36px;
   font-weight: 400;
-  margin: 0 0 8px 0;
+  margin: 0 0 16px 0;
   text-transform: lowercase;
 }
 
