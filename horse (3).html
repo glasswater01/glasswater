@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>But mama I am a horse</title>
+  <link rel="stylesheet" href="horse.css">
+</head>
+<body>
+
+  <a href="index.html" class="back-button">←</a>
+
+  <button class="arrow arrow-left" id="prev" aria-label="Anterior">←</button>
+
+  <main class="slider">
+    <img id="slide" src="./horse-1.jpg" alt="But mama I am a horse">
+  </main>
+
+  <button class="arrow arrow-right" id="next" aria-label="Siguiente">→</button>
+
+  <p class="counter" id="counter">1 / 6</p>
+
+  <script>
+    const images = [
+      "./horse-1.jpg",
+      "./horse-2.jpg",
+      "./horse-3.jpg",
+      "./horse-4.jpg",
+      "./horse-5.jpg",
+      "./horse-6.jpg"
+    ];
+    let current = 0;
+    const slide = document.getElementById("slide");
+    const counter = document.getElementById("counter");
+
+    function show(i){
+      current = (i + images.length) % images.length;
+      slide.src = images[current];
+      counter.textContent = (current + 1) + " / " + images.length;
+    }
+
+    document.getElementById("next").addEventListener("click", () => show(current + 1));
+    document.getElementById("prev").addEventListener("click", () => show(current - 1));
+    slide.addEventListener("click", () => show(current + 1));
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight") show(current + 1);
+      if (e.key === "ArrowLeft") show(current - 1);
+    });
+
+    let startX = null;
+    document.addEventListener("touchstart", (e) => { startX = e.touches[0].clientX; });
+    document.addEventListener("touchend", (e) => {
+      if (startX === null) return;
+      const dx = e.changedTouches[0].clientX - startX;
+      if (Math.abs(dx) > 50) show(current + (dx < 0 ? 1 : -1));
+      startX = null;
+    });
+
+    images.forEach(src => { const im = new Image(); im.src = src; });
+  </script>
+
+</body>
+</html>
